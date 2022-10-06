@@ -40,10 +40,7 @@ const employees = [ismayil, namiq, elnur, zamin, neriman, rahim];
 function findAverage(arr)
 {   
     foreachFun(arr, callback);
-    average = employees[0];
-    foreachFun(arr, repair);
 
-    return average;
 }
 
 function foreachFun(arr, callback){
@@ -54,12 +51,13 @@ function foreachFun(arr, callback){
 }
 
 
+
 function callback(value, i, arr){
     if(i === 0)
     {
         let temp = value.salary/arr.length;
-        employees[0] = 0;
-        employees[0] = temp;
+        employees[0]=0;
+        employees[0]=temp;
     }
     else
     {
@@ -67,20 +65,7 @@ function callback(value, i, arr){
     }
 }
 
-function repair(value, i, arr)
-{
-    if(i === 0)
-        employees[0] *= arr.length;
-    else
-    {
-        employees[0] -= value.salary;
-    }
-}
-
-
-
-console.log(findAverage(employees));
-
+console.log(findAverage(employees[0]));
 
 
 
